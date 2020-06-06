@@ -1,0 +1,30 @@
+//====================
+//header
+//====================
+.l-header{
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    background:$font-color_date;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:$space_xl;
+    padding-right:$space_xl;
+    position: fixed;
+    transition: .3s;
+    z-index:2;
+    &.float_active{
+        transition: .3s;
+        background: $font-color_default;
+    }
+    @include mq(){
+        
+    }
+    &__title{
+        font-size: $font-size_xl;
+        font-family: $font-family_corp;
+        font-weight:bold;
+    }
+}
