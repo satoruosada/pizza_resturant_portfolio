@@ -4,26 +4,13 @@
 .c-menu{
   display: flex;
   font-size: $font-size_xl;
-  font-family:$font-family_corp;
+  font-family: $font-family_corp;
   position: relative;
   right: 30px;
   &__item{
-    margin-right: $space_xl;
+      margin-right:$font-size_l;
   }
   &__link{
-    -webkit-font-smoothing:initial;
-  }
-  @include mq(){
-    display: block;
-    font-size: $font-size_xxl;
-    &__item{
-      margin-right: initial;
-    }
-    &__link{
       -webkit-font-smoothing:initial;
-      display: block;
-      padding: $space_l;
-      text-align: center;
-    }
   }
 }

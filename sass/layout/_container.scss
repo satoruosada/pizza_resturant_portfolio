@@ -1,59 +1,45 @@
-//==============
-//l-container
-//==============
+//=======
+//container
+//=======
 .l-container{
-  width:80%;
-  @include mq(){
-    width:100%;
-  }
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top:80px;
-  padding-bottom: 120px;
-  padding-left: $space_xl;
-  padding-right: $space_xl;
-  &__title{
-    font-family: $font-family_corp;
-    text-align: center;
-    font-size: $font-size_3l;
-    margin-bottom: $space_3l;
-    @include mq(){
-      width:100%;
-      margin-left: auto;
-      margin-right: auto;
+    width:90%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+    padding-bottom: 120px;
+    padding-left: $space_xl;
+    padding-right: $space_xl;
+    &__title{
+        font-family: $font-family_corp;
+        text-align: center;
+        font-size: $font-size_3l;
+        margin-bottom: $space_3l;
     }
-  }
-  &__body{
-    overflow: hidden;
-  @include mq(){
-    padding-left: 15px;
-    padding-right: 15px;
-   }
-  }
+    &__body{
+        overflow: hidden;
+    }
+    &__ornament{
 
-  &__ornament{
-
-    &__span{
-      display: inline-block;
-      background: #fff;
-      padding: 0 10px;
-      position: relative;
-      z-index: 1;
+        &__span{
+            display: inline-block;
+            background: #fff;
+            padding:0 10px;
+            position: relative;
+            z-index:1;
+        }
+        &:before,&:after{
+            border-top:3px solid black ;
+            content: '';
+            display: block;
+            position: relative;
+            z-index: 0;
+        }
+        &:before{
+            top:20px;
+        }
+        &:after{
+            top:-10px;
+        }
     }
-    &:before, &:after{
-      border-top: 1px solid #2e1f1a;
-      content: "";
-      display: block;
-      position: relative;
-      z-index: 0;
-    }
-    &:before{
-      top:21px;
-    }
-    &:after{
-      top:-29px;
-    }
-
-  }
 }
